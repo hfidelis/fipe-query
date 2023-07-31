@@ -7,7 +7,7 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  min-height: 8vh;
+  min-height: 10%;
   width: 100%;
 
   background-color: var(--primary);
@@ -15,7 +15,7 @@ header {
   padding: 2em 4em;
 
   border-top: .2em solid var(--secondary);
-  border-bottom: .2em solid var(--accent1);
+  border-bottom: .2em solid var(--accent2);
 }
 
 .logo {
