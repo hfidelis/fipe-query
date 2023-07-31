@@ -18,6 +18,9 @@
   --accent1: #F25E7A;
   --accent2: #F22233;
   --accent3: #731022;
+
+  --shadow-light: rgb(0 0 0 / .35);
+  --shadow-high: rgb(0 0 0 / .75);
 }
 
 * {
