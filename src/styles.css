@@ -29,3 +29,16 @@
 html, body {
   height: 100%;
 }
+
+::-webkit-scrollbar {
+  max-width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent1);
+  border-radius: .4em;
+}
