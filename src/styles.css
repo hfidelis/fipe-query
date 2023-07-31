@@ -5,10 +5,13 @@
 :root {
   --text-primary: 'Roboto', sans-serif;
   --text-secondary: 'Josefin Sans', sans-serif;
-  --text-secondary: ;
 
   --white: #fcfcfc;
   --black: #0B0B0B;
+
+  --green: #0aaa12;
+  --red: #DF0808;
+  --yellow: #F0D123;
 
   --primary: #131212;
   --secondary: #474F59;

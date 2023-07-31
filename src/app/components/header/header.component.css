@@ -1,0 +1,70 @@
+* {
+  transition: all 400ms;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 8vh;
+  width: 100%;
+
+  background-color: var(--primary);
+
+  padding: 2em 4em;
+
+  border-top: .2em solid var(--secondary);
+  border-bottom: .2em solid var(--accent1);
+}
+
+.logo {
+  font-size: 2em;
+}
+
+.logo fa-icon {
+  color: var(--accent1);
+  margin-right: .4em;
+}
+
+.logo span {
+  color: var(--white);
+  font-family: var(--text-secondary);
+}
+
+.nav_links {
+  display: flex;
+  gap: .8em;
+}
+
+.nav_links li {
+  list-style: none;
+}
+
+.nav_links a {
+  color: var(--white);
+
+  font-family: var(--text-secondary);
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav_links a:hover {
+  color: var(--black);
+
+  padding: .6em;
+  border-radius: .4em;
+
+  background-color: var(--white);
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2em;
+  }
+}
+
