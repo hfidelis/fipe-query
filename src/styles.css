@@ -21,6 +21,7 @@
 
   --shadow-light: rgb(0 0 0 / .35);
   --shadow-high: rgb(0 0 0 / .75);
+  --shadow-accent: #F2223355;
 }
 
 * {
