@@ -1,1 +1,47 @@
-<p>about works!</p>
+<section class="about">
+
+  <div id="banner_image">
+    <span id="banner_text">
+      <fa-icon [icon]="faCircleInfo" animation="fade"></fa-icon>
+      <h1>Informações</h1>
+    </span>
+    <picture>
+      <img src="../../../assets/images/about_picture.jpg" alt="">
+    </picture>
+  </div>
+
+  <div class="about_div">
+    <h1>O que é a Tabela FIPE? <fa-icon [icon]="faTable"></fa-icon></h1>
+
+    <div class="info_div">
+      <p>
+      Ela é nada mais do que uma tabela disponível no site da <a href="https://veiculos.fipe.org.br/#:~:text=A%20Tabela%20Fipe%20expressa%20preços,parâmetro%20para%20negociações%20ou%20avaliações." target="_blank"><fa-icon [icon]="faLink" animation="beat"></fa-icon> Fundação Instituto de Pesquisas Econômicas (Fipe)</a> que pode ser consultada para saber o preço médio de um veículo usado ou seminovo, levando em consideração aspectos como: marca, ano-modelo e versão de um veículo.
+      Pode-se dizer que a tabela Fipe mostra os preços médios do mercado automotivo do Brasil e é muito utilizada na hora de fazer seguros, financiamentos e negócios. Por ser tão importante para esse mercado, é muito comum observar nas propagandas e nos contratos a frase “Pagamos tabela Fipe!”.
+      </p>
+      <span id="text_source">
+        Fonte:
+        <a href="https://www.moura.com.br/blog/o-que-e-tabela-fipe/" target="_blank">www.moura.com.br</a>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="about_div">
+
+    <h1>O que fazemos? <fa-icon [icon]="faHandshakeSimple"></fa-icon></h1>
+
+    <div class="info_div">
+      <p>Disponibilizamos a <span>consulta</span> e <span>comparação</span> entre o preço real de diversos veículos pela tabela FIPE, e o preço no qual você deseja <span>comprar</span> ou <span>vender</span> o modelo selecionado!</p>
+
+      <p>
+        Usamos como fonte dos valores a
+        <a href="http://deividfortuna.github.io/fipe/" target="_blank">
+          <fa-icon [icon]="faLink" animation="beat"></fa-icon>
+          FIPE API HTTP REST
+        </a>
+        para realizar buscas, acesse o link e veja em detalhes o seu funcionamento.
+      </p>
+    </div>
+
+  </div>
+</section>
