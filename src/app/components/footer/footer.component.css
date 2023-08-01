@@ -6,6 +6,7 @@ footer {
 
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-flow: row wrap;
   gap: 2.2em 2em;
   padding: 3em 2em 1.5em 2em;
