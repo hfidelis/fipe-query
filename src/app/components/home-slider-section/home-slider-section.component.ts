@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IconDefinition, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { IconDefinition, faMagnifyingGlass } from '@fortawesome/free-solid-svg-i
   templateUrl: './home-slider-section.component.html',
   styleUrls: ['./home-slider-section.component.css']
 })
-export class HomeSliderSectionComponent {
+export class HomeSliderSectionComponent implements OnInit {
   faMagnifyingGlass: IconDefinition = faMagnifyingGlass;
   images: Array<string> = [
     '../../../assets/images/slider_1.jpg',
