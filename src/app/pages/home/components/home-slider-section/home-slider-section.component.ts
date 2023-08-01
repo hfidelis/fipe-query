@@ -31,7 +31,7 @@ export class HomeSliderSectionComponent implements OnInit {
         i = 0
       }
       this.slideSource = this.images[i]
-    }, 4000)
+    }, 7500)
 
   }
 }
