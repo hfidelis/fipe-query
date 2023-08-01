@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { QueryModule } from './modules/query/query.module';
+import { HomeSliderSectionComponent } from './components/home-slider-section/home-slider-section.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { QueryModule } from './modules/query/query.module';
     FooterComponent,
     HomeComponent,
     AboutComponent,
+    HomeSliderSectionComponent,
   ],
   imports: [
     BrowserModule,

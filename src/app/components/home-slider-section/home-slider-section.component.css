@@ -1,0 +1,138 @@
+#desc_banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2em;
+
+  width: 100%;
+  height: auto;
+
+  padding: 5em;
+
+  filter: contrast(140%) brightness(105%);
+
+  background: radial-gradient(circle at 50% 50%, rgba(19,18,18,1), rgba(61,10,23,1)),
+  url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+#desc_title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2em;
+
+  width: 30%;
+  height: 100%;
+
+}
+
+#desc_title h1 {
+  color: var(--white);
+  font-size: 2.2em;
+  font-family: var(--text-secondary);
+}
+
+#desc_title a {
+  color: var(--white);
+  background-color: var(--accent1);
+
+  padding: .6em;
+  border-radius: .4em;
+
+  font-size: 1.2em;
+  font-family: var(--text-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: all 400ms;
+}
+
+#desc_title a:hover {
+  transform: scale(1.1);
+
+  background-color: var(--accent2);
+
+  border-bottom: .15em solid var(--white);
+  border-right: .15em solid var(--white);
+}
+
+#slider {
+  height: 100%;
+  width: 40%;
+
+  overflow: hidden;
+
+  background-color: var(--shadow-light);
+
+  box-shadow: 0 .4em .8em #FFFFFF25;
+}
+
+#slider picture {
+  height: 100%;
+  width: 100%;
+  filter: brightness(.9);
+}
+
+#slider img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/8;
+
+  animation: fade 4s linear infinite;
+
+  opacity: 0;
+  transition: all 400ms;
+}
+
+
+@keyframes fade {
+  15% {
+    opacity: 0.15;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #desc_title h1 {
+    font-size: 1.8em;
+  }
+  #slider {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #desc_banner {
+    flex-direction: column-reverse;
+    gap: 2em;
+
+    padding: 5em 2em;
+  }
+  #slider, #desc_title {
+    width: 80%;
+  }
+  #desc_title {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  #slider, #desc_title {
+    width: 100%;
+  }
+}
