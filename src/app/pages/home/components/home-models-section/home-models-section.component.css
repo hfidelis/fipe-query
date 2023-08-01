@@ -1,0 +1,131 @@
+#models_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6em;
+
+  filter: contrast(120%);
+
+  background: radial-gradient(circle at 50% 50%, rgb(218, 218, 245), rgb(37, 36, 36)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+
+  height: auto;
+  width: 100%;
+
+  padding: 5em 0;
+}
+
+#models_section h2 {
+  font-size: 2em;
+  font-weight: 700;
+  font-family: var(--text-secondary);
+  color: var(--white);
+
+  padding-inline: 4em;
+  text-align: center;
+}
+
+#cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+
+  height: auto;
+  width: 100%;
+}
+
+#cards:has(.card:hover) .card:not(:hover) {
+  filter: grayscale(.85);
+  transform: scale(.95);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+
+  height: 20em;
+  width: 20em;
+
+  padding: 2em;
+  border-radius: .4em;
+  border: .15em solid #FFFFFF25;
+
+  background-color: rgba(184, 184, 223, 0.489);
+  box-shadow: 0 .4em .8em #0B0B0B25;
+
+  transition: all 400ms;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 .4em .8em #ffffff55;
+}
+
+.card picture {
+  height: 80%;
+  width: 100%;
+
+  border-radius: .4em;
+  overflow: hidden;
+  box-shadow: 0 .2em .8em #0B0B0B55;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.card span {
+  color: var(--black);
+
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: .05em;
+  font-family: var(--text-secondary);
+
+  margin-right: .4em;
+}
+
+@media screen and (max-width: 1300px) {
+  .card {
+    height: 16em;
+    width: 16em;
+  }
+  .card span {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #cards {
+    flex-direction: column;
+  }
+  .card {
+    height: 18em;
+    width: 18em;
+  }
+  .card span {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #cards {
+    flex-direction: column;
+  }
+  .card {
+    height: 14em;
+    width: 14em;
+  }
+  .card span {
+    font-size: 1em;
+  }
+}

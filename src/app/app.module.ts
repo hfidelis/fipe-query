@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { QueryModule } from './modules/query/query.module';
 import { HomeSliderSectionComponent } from './pages/home/components/home-slider-section/home-slider-section.component';
+import { HomeModelsSectionComponent } from './pages/home/components/home-models-section/home-models-section.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HomeSliderSectionComponent } from './pages/home/components/home-slider-
     HomeComponent,
     AboutComponent,
     HomeSliderSectionComponent,
+    HomeModelsSectionComponent,
   ],
   imports: [
     BrowserModule,

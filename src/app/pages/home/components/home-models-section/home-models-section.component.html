@@ -1,0 +1,15 @@
+<section id="models_section">
+  <h2>Informações sobre as principais categorias!</h2>
+
+  <div id="cards">
+
+    <div class="card" *ngFor="let model of models">
+      <picture>
+        <img src="{{ model.img }}" alt="Modelo de {{ model.title }}">
+      </picture>
+      <span>{{ model.title | uppercase}} <fa-icon [icon]="model.icon"></fa-icon></span>
+    </div>
+
+  </div>
+
+</section>
