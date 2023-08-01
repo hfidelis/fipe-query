@@ -17,6 +17,9 @@ footer {
 footer section {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
 
   width: 25%;
 
@@ -25,6 +28,17 @@ footer section {
   font-family: var(--text-primary);
   font-weight: 500;
   text-align: justify;
+}
+
+.section_title {
+  font-size: 1.2em;
+  font-family: var(--text-secondary);
+  color: var(--accent2);
+}
+
+.section_title fa-icon {
+  color: var(--accent1);
+  margin-left: .2em;
 }
 
 footer div {
