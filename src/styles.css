@@ -21,6 +21,9 @@
 
   --shadow-light: rgb(0 0 0 / .35);
   --shadow-high: rgb(0 0 0 / .75);
+
+  --gradient1: radial-gradient(circle at 50% 50%, rgb(218, 218, 245), rgb(37, 36, 36));
+  --gradient2: radial-gradient(circle at 50% 50%, rgba(19,18,18,1), rgba(61,10,23,1));
 }
 
 * {

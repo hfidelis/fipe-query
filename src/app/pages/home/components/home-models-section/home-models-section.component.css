@@ -7,7 +7,7 @@
 
   filter: contrast(120%);
 
-  background: radial-gradient(circle at 50% 50%, rgb(218, 218, 245), rgb(37, 36, 36)),
+  background: var(--gradient1),
 	url(https://grainy-gradients.vercel.app/noise.svg);
 
   height: auto;
