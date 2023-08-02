@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { QueryComponent } from './pages/query/query.component';
-
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { QueryComponent } from './pages/query/query.component';
     QueryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     QueryComponent
