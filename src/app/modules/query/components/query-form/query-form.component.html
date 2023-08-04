@@ -1,1 +1,74 @@
-<p>query-form works!</p>
+<div id="form_wrapper">
+  <form [formGroup]="vehicleForm" #formDir="ngForm" (ngSubmit)="submit()">
+
+    <h2>Escolha um tipo</h2>
+
+    <section id="radio_inputs">
+      <div class="radio_div" [ngClass]="{'checked': isChecked === 1}">
+        <fa-icon [icon]="faCarSide"></fa-icon>
+        <label for="vehicleType">Carros</label>
+        <input type="radio" value="{{ carValue }}" formControlName="vehicleType" (change)="isChecked = 1">
+      </div>
+
+      <div class="radio_div" [ngClass]="{'checked': isChecked === 2}">
+        <fa-icon [icon]="faMotorcycle"></fa-icon>
+        <label for="vehicleType">Motos</label>
+        <input type="radio" value="{{ motorcycleValue }}" formControlName="vehicleType" (change)="isChecked = 2">
+      </div>
+
+      <div class="radio_div" [ngClass]="{'checked': isChecked === 3}">
+        <fa-icon [icon]="faTruck"></fa-icon>
+        <label for="vehicleType">Caminhões</label>
+        <input type="radio" value="{{ truckValue }}" formControlName="vehicleType" (change)="isChecked = 3">
+      </div>
+    </section>
+
+    <section id="select_inputs">
+      <div class="select_div">
+        <label for="brandCode">MARCA <fa-icon [icon]="faIndustry"></fa-icon></label>
+        <select formControlName="brandCode" class="select_box">
+          <option value="" disabled>Escolha uma marca</option>
+          <option *ngFor="let brand of brands$ | async" value="{{ brand.codigo }}">
+            {{ brand.nome | uppercase }}
+          </option>
+        </select>
+        <div class="icon_box">
+          <fa-icon [icon]="faCaretDown" animation="beat-fade"></fa-icon>
+        </div>
+      </div>
+
+      <div class="select_div">
+        <label for="modelCode">MODELO <fa-icon [icon]="faTags"></fa-icon></label>
+        <select formControlName="modelCode" class="select_box">
+          <option value="" disabled>Escolha um modelo</option>
+          <option *ngFor="let model of models$ | async" value="{{ model.codigo }}">
+            {{ model.nome | uppercase }}
+          </option>
+        </select>
+        <div class="icon_box">
+          <fa-icon [icon]="faCaretDown" animation="beat-fade"></fa-icon>
+        </div>
+      </div>
+
+      <div class="select_div">
+        <label for="yearCode">ANO <fa-icon [icon]="faCalendarDays"></fa-icon></label>
+        <select formControlName="yearCode" class="select_box">
+          <option value="" disabled>Escolha um ano</option>
+          <option *ngFor="let year of years$ | async" value="{{ year.codigo }}">
+            {{ year.nome }}
+          </option>
+        </select>
+        <div class="icon_box">
+          <fa-icon [icon]="faCaretDown" animation="beat-fade"></fa-icon>
+        </div>
+      </div>
+    </section>
+
+    <div *ngIf="vehicleForm.invalid && formDir.submitted" class="form_error">
+      <span>Preencha todos os campos! <fa-icon [icon]="faTriangleExclamation" animation="bounce"></fa-icon></span>
+    </div>
+
+    <input type="submit" value="Consultar">
+
+  </form>
+</div>

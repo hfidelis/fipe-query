@@ -1,0 +1,12 @@
+#query_section {
+  filter: contrast(120%);
+  background: var(--gradient1),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 80vh;
+  width: 100%;
+}

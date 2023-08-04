@@ -1,0 +1,270 @@
+h2 {
+  text-align: center;
+  font-family: var(--text-secondary);
+  font-size: 1.2em;
+}
+
+#form_wrapper {
+  height: auto;
+  width: 40em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4em 6em;
+
+  border-radius: .4em;
+  border: .15em solid #FFFFFF25;
+
+  background-color: #ffffff30;
+  box-shadow: 0 .4em .8em #0B0B0B25;
+
+  margin: 4em 0;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+label {
+  font-family: var(--text-secondary);
+  font-size: 1.2em;
+  font-weight: 700;
+
+  margin-bottom: .2em;
+}
+
+#radio_inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.radio_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+
+  padding: .4em;
+
+  width: 30%;
+
+  border-radius: .4em;
+  background-color: var(--white);
+  border: .15em solid var(--accent2);
+
+  cursor: pointer;
+
+  transition: all 400ms;
+
+  opacity: .4;
+}
+
+.radio_div:hover {
+  opacity: 1;
+}
+
+.checked {
+  background-color: var(--accent2);
+  color: var(--white);
+  border-color: var(--white);
+  box-shadow: 0 .4em .8em var(--white);
+
+  opacity: 1;
+}
+
+.radio_div input {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+
+  cursor: pointer;
+}
+
+.radio_div fa-icon {
+  font-size: 3em;
+}
+
+#select_inputs {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+
+  width: 100%;
+}
+
+.select_div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+
+  width: 100%;
+}
+
+.select_box {
+  border: none;
+  appearance: none;
+
+  padding: .4em;
+  border-radius: .2em .2em 0 0;
+  border-bottom: .2em solid rgba(184, 184, 223, 0.789);
+
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--text-primary);
+
+  background-color: var(--white);
+
+  box-shadow: 0 .2em .8em var(--shadow-light);
+
+  height: 2.2em;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.select_box:focus {
+  outline: none;
+  box-shadow: 0 .4em .8em var(--white);
+}
+
+.select_div > label > fa-icon {
+  margin-left: .4em;
+}
+
+.icon_box {
+  height: 2.2em;
+  width: 3em;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  border-radius: 0 .2em 0 0;
+  border-bottom: .2em solid rgba(184, 184, 223, .95);
+
+  background-color: var(--accent2);
+  color: var(--white);
+}
+
+option {
+  font-weight: 500;
+  font-family: var(--text-primary);
+
+  background-color: var(--accent2);
+  color: var(--white);
+
+  max-width: 100%;
+}
+
+input[type="submit"] {
+  width: 60%;
+
+  padding: .6em;
+  border-radius: .4em;
+  border: none;
+
+  background-color: var(--accent2);
+  color: var(--white);
+  box-shadow: 0 .4em .8em var(--shadow-light);
+
+  text-transform: uppercase;
+
+  font-size: 1.2em;
+  font-family: var(--text-secondary);
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent3);
+}
+
+@media screen and (max-width: 1400px) {
+  #form_wrapper {
+    width: 35em;
+
+    padding: 3em 4em;
+  }
+  .radio_div fa-icon {
+    font-size: 2em;
+  }
+  label {
+    font-size: .8em;
+  }
+  .select_box {
+    height: 2em;
+  }
+  .icon_box {
+    height: 1.6em;
+  }
+  .select_box {
+    font-size: .8em;
+  }
+  input[type="submit"] {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #form_wrapper {
+    width: 28em;
+
+    padding: 3em 4em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #form_wrapper {
+    width: 22em;
+
+    padding: 3em 2em;
+  }
+  .radio_div fa-icon {
+    font-size: 1.5em;
+  }
+  label {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #form_wrapper {
+    width: 18em;
+
+    padding: 3em 2em;
+  }
+  #radio_inputs {
+    flex-direction: column;
+    gap: .8em;
+  }
+  .radio_div {
+    width: 60%;
+  }
+}
