@@ -14,7 +14,7 @@
   --yellow: #F0D123;
 
   --primary: #131212;
-  --secondary: #212122;
+  --secondary: #343436;
   --accent1: #F25E7A;
   --accent2: #F22233;
   --accent3: #731022;
@@ -51,6 +51,6 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--accent1);
+  background-color: var(--secondary);
   border-radius: .4em;
 }
