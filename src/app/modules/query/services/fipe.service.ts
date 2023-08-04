@@ -22,19 +22,19 @@ export class FipeService {
     return this.http.get<Array<FipePattern>>(url);
   }
 
-  getModels(type: string, brandCode: number): Observable<any> {
+  getModels(type: string, brandCode: string): Observable<any> {
     const url: string = `${this.baseApiUrl}${type}/marcas/${brandCode}/modelos`;
     return this.http.get<any>(url).pipe(
       map(data => data.modelos)
     );
   }
 
-  getModelYears(type: string, brandCode: number, modelCode: number): Observable<Array<FipePattern>> {
+  getModelYears(type: string, brandCode: string, modelCode: string): Observable<Array<FipePattern>> {
     const url: string = `${this.baseApiUrl}${type}/marcas/${brandCode}/modelos/${modelCode}/anos`;
     return this.http.get<Array<FipePattern>>(url);
   }
 
-  getModelDetails(type: string, brandCode: number, modelCode: number, yearCode: string): Observable<Vehicle> {
+  getModelDetails(type: string, brandCode: string, modelCode: string, yearCode: string): Observable<Vehicle> {
     const url: string = `${this.baseApiUrl}${type}/marcas/${brandCode}/modelos/${modelCode}/anos/${yearCode}`;
     return this.http.get<Vehicle>(url);
   }
