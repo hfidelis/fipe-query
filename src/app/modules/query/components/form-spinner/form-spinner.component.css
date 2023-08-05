@@ -1,0 +1,36 @@
+div {
+  border: .15em solid #FFFFFF25;
+  border-radius: .4em;
+  background-color: #ffffff30;
+  box-shadow: 0 .4em .8em #0B0B0B25;
+
+  padding: 2em;
+
+  animation: load 3500ms ease-in-out;
+}
+
+fa-icon {
+  font-size: 5em;
+  color: var(--accent2);
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+    transform: scale(.2);
+  }
+  25% {
+    opacity: .7;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  75% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(.2);
+  }
+}
