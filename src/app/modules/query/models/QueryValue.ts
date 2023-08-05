@@ -1,5 +1,5 @@
 export interface QueryValue {
-  type: string;
+  vehicleType: string;
   brandCode: string;
   modelCode: string;
   yearCode: string;
