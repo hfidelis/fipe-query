@@ -3,4 +3,5 @@ export interface QueryValue {
   brandCode: string;
   modelCode: string;
   yearCode: string;
+  userValue: number;
 }
