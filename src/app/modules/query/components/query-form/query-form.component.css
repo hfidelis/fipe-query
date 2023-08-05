@@ -23,6 +23,10 @@ h2 {
   margin: 4em 0;
 }
 
+.exitFade {
+  animation: fadeOut 600ms ease-in-out;
+}
+
 form {
   height: 100%;
   width: 100%;
@@ -204,6 +208,46 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: var(--accent3);
+}
+
+.form_error {
+  text-align: center;
+
+  border-left: .2em solid var(--error-message);
+  padding-left: .4em;
+
+  color: var(--error-message);
+
+  font-family: var(--text-primary);
+  font-weight: 500;
+  font-size: .8em;
+  letter-spacing: .075em;
+
+  animation: showUp 300ms ease-in-out 4;
+}
+
+@keyframes showUp {
+  25% {
+    transform: translateX(.8em);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-.8em);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 1400px) {

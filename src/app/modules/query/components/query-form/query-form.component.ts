@@ -1,11 +1,21 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  faCalendarDays,
+  faCaretDown,
+  faCarSide,
+  faIndustry,
+  faMotorcycle,
+  faTags,
+  faTriangleExclamation,
+  faTruck,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { faMotorcycle, faCarSide, faTruck, IconDefinition, faCalendarDays, faTags, faCaretDown, faIndustry, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
-import { QueryValue } from '../../models/QueryValue';
 import { FipePattern } from '../../models/FipePattern';
+import { QueryValue } from '../../models/QueryValue';
 import { FipeService } from '../../services/fipe.service';
 
 @Component({
@@ -16,6 +26,8 @@ import { FipeService } from '../../services/fipe.service';
 export class QueryFormComponent implements OnInit {
 
   @Output() onSubmit: EventEmitter<QueryValue> = new EventEmitter<QueryValue>;
+
+  fadeOut: boolean = false;
 
   vehicleForm!: FormGroup;
 
@@ -139,7 +151,12 @@ export class QueryFormComponent implements OnInit {
     if (this.vehicleForm.invalid) {
       return;
     }
-    this.onSubmit.emit(this.vehicleForm.value);
+
+    this.fadeOut = true;
+
+    setTimeout(() => {
+      this.onSubmit.emit(this.vehicleForm.value);
+    }, 600);
   };
 
 }

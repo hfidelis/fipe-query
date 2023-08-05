@@ -1,4 +1,4 @@
-<div id="form_wrapper">
+<div id="form_wrapper" [ngClass]="{'exitFade': fadeOut}">
   <form [formGroup]="vehicleForm" #formDir="ngForm" (ngSubmit)="submit()">
 
     <h2>Escolha um tipo</h2>
