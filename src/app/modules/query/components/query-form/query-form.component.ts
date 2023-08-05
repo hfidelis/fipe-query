@@ -9,6 +9,8 @@ import {
   faTags,
   faTriangleExclamation,
   faTruck,
+  faMoneyBillTransfer,
+  faDollarSign,
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import { Observable, of } from 'rxjs';
@@ -49,6 +51,8 @@ export class QueryFormComponent implements OnInit {
   faIndustry: IconDefinition = faIndustry;
   faTriangleExclamation: IconDefinition = faTriangleExclamation;
   faCaretDown: IconDefinition = faCaretDown;
+  faMoneyBillTransfer: IconDefinition = faMoneyBillTransfer;
+  faDollarSign: IconDefinition = faDollarSign;
 
   constructor(
     private fipeService: FipeService
@@ -64,6 +68,7 @@ export class QueryFormComponent implements OnInit {
       brandCode: new FormControl('', [Validators.required]),
       modelCode: new FormControl('', [Validators.required]),
       yearCode: new FormControl('', [Validators.required]),
+      userValue: new FormControl(undefined, [Validators.required, Validators.min(0)])
     });
 
     this.vehicleType?.valueChanges.subscribe({
@@ -74,6 +79,7 @@ export class QueryFormComponent implements OnInit {
         this.brandCode?.reset();
         this.modelCode?.reset();
         this.yearCode?.reset();
+        this.userValue?.reset();
         this.models$ = null;
         this.years$ = null;
       }
@@ -86,6 +92,7 @@ export class QueryFormComponent implements OnInit {
         };
         this.modelCode?.reset();
         this.yearCode?.reset();
+        this.userValue?.reset();
         this.years$ = null;
       }
     });
@@ -96,6 +103,7 @@ export class QueryFormComponent implements OnInit {
           this.years$ = this.getYears(this.vehicleType.value, this.brandCode.value, value);
         };
         this.yearCode?.reset();
+        this.userValue?.reset();
       }
     });
 
@@ -115,6 +123,10 @@ export class QueryFormComponent implements OnInit {
 
   get yearCode() {
     return this.vehicleForm.get('yearCode')!;
+  }
+
+  get userValue() {
+    return this.vehicleForm.get('userValue')!;
   }
 
   getBrands(type: string) {

@@ -64,7 +64,19 @@
       </div>
     </section>
 
+    <div id="value_div">
+      <label for="userValue">VALOR DE COMPRA/VENDA <fa-icon [icon]="faMoneyBillTransfer"></fa-icon></label>
+      <div id="input_div">
+        <span><fa-icon [icon]="faDollarSign" animation="beat-fade" ></fa-icon></span>
+        <input type="number" formControlName="userValue" placeholder="Insira um valor">
+      </div>
+    </div>
+
     <div *ngIf="vehicleForm.invalid && formDir.submitted" class="form_error">
+      <span *ngIf="userValue.errors?.['min']">
+        Insira um valor maior ou igual a zero!
+        <fa-icon [icon]="faTriangleExclamation" animation="bounce"></fa-icon>
+      </span>
       <span>Preencha todos os campos! <fa-icon [icon]="faTriangleExclamation" animation="bounce"></fa-icon></span>
     </div>
 

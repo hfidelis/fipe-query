@@ -185,6 +185,70 @@ option {
   max-width: 100%;
 }
 
+#value_div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+#input_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+#input_div > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 2.2em;
+  width: 10%;
+
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--text-primary);
+  color: var(--white);
+
+  background-color: var(--accent2);
+  border-radius: .2em 0 0 0;
+  border-bottom: .2em solid rgba(184, 184, 223, 1);
+
+  box-shadow: 0 .2em .8em var(--shadow-light)
+}
+
+input[type="number"] {
+  border: none;
+  appearance: none;
+
+  padding: .4em;
+  border-radius: 0 .2em 0 0;
+  border-bottom: .2em solid rgba(184, 184, 223, 0.789);
+
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--text-primary);
+
+  background-color: var(--white);
+
+  box-shadow: 0 .2em .8em var(--shadow-light);
+
+  height: 2.2em;
+  width: 90%;
+
+  overflow: hidden;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: 0 .4em .8em var(--white);
+}
+
 input[type="submit"] {
   width: 60%;
 
@@ -211,6 +275,12 @@ input[type="submit"]:hover {
 }
 
 .form_error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .6em;
+
   text-align: center;
 
   border-left: .2em solid var(--error-message);
@@ -262,13 +332,13 @@ input[type="submit"]:hover {
   label {
     font-size: .8em;
   }
-  .select_box {
+  .select_box, input[type="number"], #input_div > span {
     height: 2em;
   }
   .icon_box {
     height: 1.6em;
   }
-  .select_box {
+  .select_box, input[type="number"], #input_div > span {
     font-size: .8em;
   }
   input[type="submit"] {
