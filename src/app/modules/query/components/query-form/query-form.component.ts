@@ -63,39 +63,39 @@ export class QueryFormComponent implements OnInit {
       vehicleType: new FormControl('', [Validators.required]),
       brandCode: new FormControl('', [Validators.required]),
       modelCode: new FormControl('', [Validators.required]),
-      yearCode: new FormControl('', [Validators.required])
+      yearCode: new FormControl('', [Validators.required]),
     });
 
-    this.vehicleForm.get('vehicleType')?.valueChanges.subscribe({
+    this.vehicleType?.valueChanges.subscribe({
       next: (value) => {
         if (value) {
           this.brands$ = this.getBrands(value);
         };
-        this.vehicleForm.get('brandCode')?.reset();
-        this.vehicleForm.get('modelCode')?.reset();
-        this.vehicleForm.get('yearCode')?.reset();
+        this.brandCode?.reset();
+        this.modelCode?.reset();
+        this.yearCode?.reset();
         this.models$ = null;
         this.years$ = null;
       }
     });
 
-    this.vehicleForm.get('brandCode')?.valueChanges.subscribe({
+    this.brandCode?.valueChanges.subscribe({
       next: (value) => {
         if (value) {
           this.models$ = this.getModels(this.vehicleType.value, value);
         };
-        this.vehicleForm.get('modelCode')?.reset();
-        this.vehicleForm.get('yearCode')?.reset();
+        this.modelCode?.reset();
+        this.yearCode?.reset();
         this.years$ = null;
       }
     });
 
-    this.vehicleForm.get('modelCode')?.valueChanges.subscribe({
+    this.modelCode?.valueChanges.subscribe({
       next: (value) => {
         if (value) {
           this.years$ = this.getYears(this.vehicleType.value, this.brandCode.value, value);
         };
-        this.vehicleForm.get('yearCode')?.reset();
+        this.yearCode?.reset();
       }
     });
 
