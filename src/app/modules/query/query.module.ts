@@ -1,19 +1,23 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import ptBr from '@angular/common/locales/pt';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { QueryFormComponent } from './components/query-form/query-form.component';
-import { QueryComponent } from './pages/query/query.component';
-import { FormSpinnerComponent } from './components/form-spinner/form-spinner.component';
 
+import { FormSpinnerComponent } from './components/form-spinner/form-spinner.component';
+import { QueryFormComponent } from './components/query-form/query-form.component';
+import { QueryResultComponent } from './components/query-result/query-result.component';
+import { QueryComponent } from './pages/query/query.component';
+
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
     QueryComponent,
     QueryFormComponent,
-    FormSpinnerComponent
+    FormSpinnerComponent,
+    QueryResultComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +28,13 @@ import { FormSpinnerComponent } from './components/form-spinner/form-spinner.com
   ],
   exports: [
     QueryComponent
+  ],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: "pt-BR"
+    }
   ]
 })
+
 export class QueryModule { }
