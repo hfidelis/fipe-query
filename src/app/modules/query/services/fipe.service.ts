@@ -22,7 +22,7 @@ export class FipeService {
     return this.http.get<Array<FipePattern>>(url);
   }
 
-  getModels(type: string, brandCode: string): Observable<any> {
+  getModels(type: string, brandCode: string): Observable<Array<FipePattern>> {
     const url: string = `${this.baseApiUrl}${type}/marcas/${brandCode}/modelos`;
     return this.http.get<any>(url).pipe(
       map(data => data.modelos)

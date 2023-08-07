@@ -33,9 +33,9 @@ export class QueryFormComponent implements OnInit {
 
   vehicleForm!: FormGroup;
 
-  brands$?: Observable<Array<FipePattern>> | null;
-  models$?: Observable<Array<FipePattern>> | null;
-  years$?: Observable<Array<FipePattern>> | null;
+  brands$?: Observable<Array<FipePattern>>;
+  models$?: Observable<Array<FipePattern>>;
+  years$?: Observable<Array<FipePattern>>;
 
   isChecked: number | null = null;
 
@@ -80,8 +80,8 @@ export class QueryFormComponent implements OnInit {
         this.modelCode?.reset();
         this.yearCode?.reset();
         this.userValue?.reset();
-        this.models$ = null;
-        this.years$ = null;
+        this.models$ = undefined;
+        this.years$ = undefined;
       }
     });
 
@@ -93,7 +93,7 @@ export class QueryFormComponent implements OnInit {
         this.modelCode?.reset();
         this.yearCode?.reset();
         this.userValue?.reset();
-        this.years$ = null;
+        this.years$ = undefined;
       }
     });
 
@@ -129,7 +129,7 @@ export class QueryFormComponent implements OnInit {
     return this.vehicleForm.get('userValue')!;
   }
 
-  getBrands(type: string) {
+  getBrands(type: string): Observable<Array<FipePattern>> {
     return this.fipeService.getBrands(type).pipe(
       catchError(err => {
         console.log('ERRO *GET BRANDS: ');
@@ -139,7 +139,7 @@ export class QueryFormComponent implements OnInit {
     );
   };
 
-  getModels(type: string, brandCode: string) {
+  getModels(type: string, brandCode: string): Observable<Array<FipePattern>> {
     return this.fipeService.getModels(type, brandCode).pipe(
       catchError(err => {
         console.log('ERRO *GET MODELS: ');
@@ -149,7 +149,7 @@ export class QueryFormComponent implements OnInit {
     );
   };
 
-  getYears(type: string, brandCode: string, modelCode: string) {
+  getYears(type: string, brandCode: string, modelCode: string): Observable<Array<FipePattern>> {
     return this.fipeService.getModelYears(type, brandCode, modelCode).pipe(
       catchError(err => {
         console.log('ERRO *GET MODEL YEARS: ');
