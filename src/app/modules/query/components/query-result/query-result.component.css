@@ -1,0 +1,186 @@
+h1 {
+  text-align: center;
+  color: var(--black);
+
+  font-family: var(--text-secondary);
+}
+
+#query_result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+
+  background-color: #ffffff30;
+  box-shadow: 0 .4em .8em #0B0B0B25;
+
+  border: .15em solid #FFFFFF25;
+  border-radius: .4em;
+  padding: 3em;
+
+  margin-inline: 2em;
+}
+
+#data {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+
+#vehicle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: .8em;
+}
+
+.vehicle_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_title {
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: var(--text-secondary);
+}
+
+.info_title > fa-icon {
+  margin-right: .2em;
+}
+
+.info_data {
+  font-weight: 400;
+  font-style: italic;
+  font-family: var(--text-primary);
+}
+
+#price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: .6em;
+}
+
+#value_status {
+  padding: .4em;
+  border-radius: .4em;
+  background-color: var(--shadow-high);
+}
+
+#price > span {
+  font-family: var(--text-primary);
+  font-weight: 700;
+}
+
+#price_model {
+  height: 10em;
+  width: 10em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  box-shadow: 0 .4em .8em #0B0B0B75;
+}
+
+#price_model > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--shadow-high);
+
+  height: 95%;
+  width: 95%;
+
+  border-radius: 50%;
+
+  font-size: 2em;
+
+  font-family: var(--text-secondary);
+}
+
+button {
+  font-size: 1em;
+  font-family: var(--text-primary);
+  font-weight: 600;
+
+  color: var(--white);
+  background-color: var(--accent2);
+
+  cursor: pointer;
+  border: none;
+
+  border-radius: .4em;
+  padding: .6em 1.2em;
+
+  box-shadow: 0 .4em .8em #0B0B0B75;
+
+  transition: all 400ms;
+}
+
+button:hover {
+  background-color: var(--accent3);
+  transform: scale(1.065);
+}
+.intoFade {
+  animation: fadeIn 600ms ease-in-out;
+}
+
+.exitFade {
+  animation: fadeOut 600ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(.3);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #query_result {
+    padding: 2em;
+  }
+  #data {
+    gap: 2em;
+  }
+  #vehicle {
+    gap: .6;
+  }
+  .info_title {
+    font-size: 1em;
+  }
+  #price_model {
+    height: 8em;
+    width: 8em;
+  }
+  #price_model > span {
+    font-size: 1.6em;
+  }
+}

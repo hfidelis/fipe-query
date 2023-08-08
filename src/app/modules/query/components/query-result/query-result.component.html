@@ -1,1 +1,40 @@
-<p>query-result works!</p>
+<section id="query_result" *ngIf="vehicleData$ | async as vehicleData" [ngClass]="{'exitFade': fadeOut, 'intoFade': fadeIn}">
+  <h1>Informações <fa-icon [icon]="faClipboardList"></fa-icon></h1>
+  <div id="data">
+    <div id="vehicle">
+      <div class="vehicle_info">
+        <span class="info_title">Marca <fa-icon [icon]="faIndustry" animation="fade"></fa-icon></span>
+        <span class="info_data">{{ vehicleData.Marca }}</span>
+        </div>
+      <div class="vehicle_info">
+        <span class="info_title">Modelo <fa-icon [icon]="faTags" animation="fade"></fa-icon></span>
+        <span class="info_data">{{ vehicleData.Modelo }}</span>
+        </div>
+      <div class="vehicle_info">
+        <span class="info_title">Ano <fa-icon [icon]="faCalendarDays" animation="fade"></fa-icon></span>
+        <span class="info_data">{{ vehicleData.AnoModelo }}</span>
+        </div>
+      <div class="vehicle_info">
+        <span class="info_title">Combustível <fa-icon [icon]="faGasPump" animation="fade"></fa-icon></span>
+        <span class="info_data">{{ vehicleData.Combustivel }}</span>
+        </div>
+      <div class="vehicle_info">
+        <span class="info_title">Código FIPE <fa-icon [icon]="faListOl" animation="fade"></fa-icon></span>
+        <span class="info_data">{{ vehicleData.CodigoFipe }}</span>
+        </div>
+    </div>
+    <div id="price">
+      <div id="price_model" [style.backgroundColor]="(userValue | fipePercentage: vehicleData.Valor) | colorPercentage">
+        <span [style.color]="(userValue | fipePercentage: vehicleData.Valor) | colorPercentage">
+        {{ userValue | fipePercentage: vehicleData.Valor }} %
+      </span>
+      </div>
+      <span id="value_status" [style.color]="(userValue | fipePercentage: vehicleData.Valor) | colorPercentage">
+        {{ (userValue | fipePercentage: vehicleData.Valor) | statusPercentage }}
+      </span>
+      <span>Seu valor: {{ userValue | currency:'BRL' }}</span>
+      <span>Valor FIPE: {{ vehicleData.Valor }}</span>
+    </div>
+  </div>
+  <button (click)="back()">Voltar</button>
+</section>
