@@ -78,6 +78,7 @@ h1 {
 #price > span {
   font-family: var(--text-primary);
   font-weight: 700;
+  text-align: center;
 }
 
 #price_model {
