@@ -38,7 +38,7 @@ export class QueryResultComponent implements OnInit {
     this.fadeIn = true;
     setTimeout(() => {
       this.fadeIn = false;
-    }, 600);
+    }, 2000);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
