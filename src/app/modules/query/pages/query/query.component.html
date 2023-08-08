@@ -1,3 +1,5 @@
 <section id="query_section">
-  <app-query-form></app-query-form>
+  <app-query-form (onSubmit)="handleSubmit($event)" *ngIf="showForm"></app-query-form>
+  <app-form-spinner *ngIf="isLoading"></app-form-spinner>
+  <app-query-result *ngIf="isData" [data]="dataValue" (goBack)="onGoBack()"></app-query-result>
 </section>
