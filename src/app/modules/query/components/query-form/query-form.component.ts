@@ -13,8 +13,7 @@ import {
   faTruck,
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
-import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 import { FipePattern } from '../../models/FipePattern';
 import { QueryValue } from '../../models/QueryValue';
@@ -130,33 +129,15 @@ export class QueryFormComponent implements OnInit {
   }
 
   getBrands(type: string): Observable<Array<FipePattern>> {
-    return this.fipeService.getBrands(type).pipe(
-      catchError(err => {
-        console.log('ERRO *GET BRANDS: ');
-        console.log(err);
-        return of([]);
-      })
-    );
+    return this.fipeService.getBrands(type);
   };
 
   getModels(type: string, brandCode: string): Observable<Array<FipePattern>> {
-    return this.fipeService.getModels(type, brandCode).pipe(
-      catchError(err => {
-        console.log('ERRO *GET MODELS: ');
-        console.log(err);
-        return of([]);
-      })
-    );
+    return this.fipeService.getModels(type, brandCode);
   };
 
   getYears(type: string, brandCode: string, modelCode: string): Observable<Array<FipePattern>> {
-    return this.fipeService.getModelYears(type, brandCode, modelCode).pipe(
-      catchError(err => {
-        console.log('ERRO *GET MODEL YEARS: ');
-        console.log(err);
-        return of([]);
-      })
-    );
+    return this.fipeService.getModelYears(type, brandCode, modelCode);
   };
 
   submit() {
