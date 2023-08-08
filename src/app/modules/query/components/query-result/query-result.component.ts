@@ -1,11 +1,11 @@
-import { Component, Input, Output, OnInit, SimpleChanges, EventEmitter } from '@angular/core';
-import { QueryValue } from '../../models/QueryValue';
-import { FipeService } from '../../services/fipe.service';
-import { Vehicle } from '../../models/Vehicle';
-import { Observable } from 'rxjs';
-import { catchError, of } from 'rxjs';
-import { faClipboardList, faListOl, faGasPump, faCalendarDays, faIndustry, faTags, faL } from '@fortawesome/free-solid-svg-icons';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faCalendarDays, faClipboardList, faGasPump, faIndustry, faListOl, faTags } from '@fortawesome/free-solid-svg-icons';
+import { catchError, Observable, of } from 'rxjs';
+
+import { QueryValue } from '../../models/QueryValue';
+import { Vehicle } from '../../models/Vehicle';
+import { FipeService } from '../../services/fipe.service';
 
 @Component({
   selector: 'app-query-result',

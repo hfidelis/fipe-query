@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faMotorcycle, faCarSide, faTruck, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faCarSide, faMotorcycle, faTruck, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home-models-section',

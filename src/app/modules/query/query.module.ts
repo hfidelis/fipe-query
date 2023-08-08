@@ -9,8 +9,8 @@ import { FormSpinnerComponent } from './components/form-spinner/form-spinner.com
 import { QueryFormComponent } from './components/query-form/query-form.component';
 import { QueryResultComponent } from './components/query-result/query-result.component';
 import { QueryComponent } from './pages/query/query.component';
-import { FipePercentagePipe } from './pipes/fipe-percentage.pipe';
 import { ColorPercentagePipe } from './pipes/color-percentage.pipe';
+import { FipePercentagePipe } from './pipes/fipe-percentage.pipe';
 import { StatusPercentagePipe } from './pipes/status-percentage.pipe';
 
 registerLocaleData(ptBr);

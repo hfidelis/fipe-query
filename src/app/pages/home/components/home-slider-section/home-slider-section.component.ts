@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IconDefinition, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home-slider-section',

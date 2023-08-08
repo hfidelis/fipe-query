@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { faWhatsapp,faInstagram, faFacebook, IconDefinition } from '@fortawesome/free-brands-svg-icons';
-import { faMapLocationDot, faSquareShareNodes, faLandmark } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faWhatsapp, IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faLandmark, faMapLocationDot, faSquareShareNodes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',

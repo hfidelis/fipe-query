@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IconDefinition, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faGear, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-form-spinner',

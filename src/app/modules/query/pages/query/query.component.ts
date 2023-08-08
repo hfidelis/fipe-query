@@ -36,5 +36,5 @@ export class QueryComponent {
     this.isData = false;
     this.showForm = true;
   }
-  
+
 }

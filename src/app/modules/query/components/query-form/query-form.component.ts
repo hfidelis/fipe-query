@@ -4,13 +4,13 @@ import {
   faCalendarDays,
   faCaretDown,
   faCarSide,
+  faDollarSign,
   faIndustry,
+  faMoneyBillTransfer,
   faMotorcycle,
   faTags,
   faTriangleExclamation,
   faTruck,
-  faMoneyBillTransfer,
-  faDollarSign,
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import { Observable, of } from 'rxjs';
