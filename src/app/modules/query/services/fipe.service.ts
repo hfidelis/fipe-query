@@ -1,12 +1,11 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of } from 'rxjs';
-import { catchError } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
+import { MessageService } from 'src/app/services/message.service';
 import { environment } from 'src/environments/environment.development';
 
 import { FipePattern } from '../models/FipePattern';
 import { Vehicle } from '../models/Vehicle';
-import { MessageService } from 'src/app/services/message.service';
 
 @Injectable({
   providedIn: 'root'
