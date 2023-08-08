@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faCalendarDays, faClipboardList, faGasPump, faIndustry, faListOl, faTags } from '@fortawesome/free-solid-svg-icons';
-import { catchError, Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { QueryValue } from '../../models/QueryValue';
 import { Vehicle } from '../../models/Vehicle';
@@ -51,13 +51,6 @@ export class QueryResultComponent implements OnInit {
 
   getInfo(type: string, brandCode: string, modelCode: string, yearCode: string): Observable<Vehicle> {
     return this.fipeService.getModelDetails(type, brandCode, modelCode, yearCode)
-    .pipe(
-      catchError(err => {
-        console.log('ERROR *GET MODEL DETAILS: ')
-        console.log(err);
-        return of({} as Vehicle);
-      })
-    )
   }
 
   back() {
