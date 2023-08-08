@@ -1,0 +1,10 @@
+<div id="modal" *ngIf="messageService.message">
+  <header>
+    <h1>Aviso do sistema <fa-icon [icon]="faCircleExclamation" animation="beat-fade"></fa-icon></h1>
+    <button (click)="messageService.clear()">
+      <fa-icon [icon]="faXmark"></fa-icon>
+    </button>
+  </header>
+  <hr>
+  <p>{{ messageService.message }}</p>
+</div>

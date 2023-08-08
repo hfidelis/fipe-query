@@ -11,6 +11,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeModelsSectionComponent } from './pages/home/components/home-models-section/home-models-section.component';
 import { HomeSliderSectionComponent } from './pages/home/components/home-slider-section/home-slider-section.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MessageModalComponent } from './components/message-modal/message-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomeComponent } from './pages/home/home.component';
     AboutComponent,
     HomeSliderSectionComponent,
     HomeModelsSectionComponent,
+    MessageModalComponent,
   ],
   imports: [
     BrowserModule,
