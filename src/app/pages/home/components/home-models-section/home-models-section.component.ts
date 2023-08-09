@@ -16,9 +16,9 @@ export class HomeModelsSectionComponent {
   faCarSide: IconDefinition = faCarSide;
   faTruck: IconDefinition = faTruck;
 
-  bikeModelSource: string = '../../../../../assets/images/models_motorbike.jpg';
-  carModelSource: string = '../../../../../assets/images/models_car.jpg';
-  truckModelSource: string = '../../../../../assets/images/models_truck.jpg';
+  bikeModelSource: string = 'assets/images/models_motorbike.jpg';
+  carModelSource: string = 'assets/images/models_car.jpg';
+  truckModelSource: string = 'assets/images/models_truck.jpg';
 
   models: Array<{title: string, icon: IconDefinition, img: string}> = [
     {title: this.carTitle, icon: faCarSide, img: this.carModelSource},

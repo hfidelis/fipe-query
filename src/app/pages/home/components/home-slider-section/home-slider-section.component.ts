@@ -9,9 +9,9 @@ import { faMagnifyingGlass, IconDefinition } from '@fortawesome/free-solid-svg-i
 export class HomeSliderSectionComponent implements OnInit {
   faMagnifyingGlass: IconDefinition = faMagnifyingGlass;
   images: Array<string> = [
-    '../../../assets/images/slider_1.jpg',
-    '../../../assets/images/slider_2.jpg',
-    '../../../assets/images/slider_3.jpg'
+    'assets/images/slider_1.jpg',
+    'assets/images/slider_2.jpg',
+    'assets/images/slider_3.jpg'
   ]
   slideSource: string = this.images[0]
 
