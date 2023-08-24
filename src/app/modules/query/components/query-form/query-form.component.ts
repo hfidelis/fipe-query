@@ -74,7 +74,7 @@ export class QueryFormComponent implements OnInit {
       next: (value) => {
         if (value) {
           this.brands$ = this.getBrands(value);
-        };
+        }
         this.brandCode?.reset();
         this.modelCode?.reset();
         this.yearCode?.reset();
@@ -88,7 +88,7 @@ export class QueryFormComponent implements OnInit {
       next: (value) => {
         if (value) {
           this.models$ = this.getModels(this.vehicleType.value, value);
-        };
+        }
         this.modelCode?.reset();
         this.yearCode?.reset();
         this.userValue?.reset();
@@ -100,7 +100,7 @@ export class QueryFormComponent implements OnInit {
       next: (value) => {
         if (value) {
           this.years$ = this.getYears(this.vehicleType.value, this.brandCode.value, value);
-        };
+        }
         this.yearCode?.reset();
         this.userValue?.reset();
       }

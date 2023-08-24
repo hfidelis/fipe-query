@@ -46,7 +46,7 @@ export class QueryResultComponent implements OnInit {
       this.vehicleData$ = this.getInfo(this.data.vehicleType, this.data.brandCode, this.data.modelCode, this.data.yearCode);
 
       this.userValue = this.data.userValue;
-    };
+    }
   }
 
   getInfo(type: string, brandCode: string, modelCode: string, yearCode: string): Observable<Vehicle> {
