@@ -33,7 +33,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     QueryModule
   ],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' }
+    { provide: APP_BASE_HREF, useValue: '/fipe-query/' }
   ],
   bootstrap: [AppComponent]
 })
