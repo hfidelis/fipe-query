@@ -12,6 +12,7 @@ import { QueryComponent } from './pages/query/query.component';
 import { ColorPercentagePipe } from './pipes/color-percentage.pipe';
 import { FipePercentagePipe } from './pipes/fipe-percentage.pipe';
 import { StatusPercentagePipe } from './pipes/status-percentage.pipe';
+import { QueryRoutingModule } from './query-routing.module';
 
 registerLocaleData(ptBr);
 
@@ -30,7 +31,8 @@ registerLocaleData(ptBr);
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    QueryRoutingModule
   ],
   exports: [
     QueryComponent
